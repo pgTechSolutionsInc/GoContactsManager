@@ -1,0 +1,85 @@
+🧰 Project: Contact Manager CLI (Text-based)
+📦 What You'll Build
+A command-line tool to manage contacts (name + age), stored in a JSON file.
+
+🧠 Concepts You'll Practice:
+Reading user input
+
+Structs & slices
+
+File I/O
+
+JSON encoding/decoding
+
+Looping and simple menu system
+
+🧑‍💻 Assignment: Contact Manager v1
+✅ Features to Implement
+Main Menu
+
+pgsql
+Copy
+Edit
+1. Add new contact
+2. List all contacts
+3. Exit
+Adding a contact
+
+Prompt user for name and age
+
+Append to a slice of Person
+
+Save to JSON file
+
+Listing contacts
+
+Load from JSON file
+
+Display each contact
+
+🧱 Struct
+go
+Copy
+Edit
+type Person struct {
+    Name string `json:"name"`
+    Age  int    `json:"age"`
+}
+📂 File
+Save contacts in: contacts.json
+
+🚦Flow Summary
+Load existing contacts.json into []Person
+
+Show menu (loop until user exits)
+
+Based on input, either:
+
+Add → prompt + append + save to file
+
+List → print each name + age
+
+Exit → end program
+
+🤖 Hints
+Use bufio.NewReader(os.Stdin) + reader.ReadString('\n') for string input.
+
+Use strconv.Atoi to convert string to int.
+
+Create helper functions:
+
+go
+Copy
+Edit
+func loadContacts() []Person
+func saveContacts([]Person)
+⏭️ Your Task
+Build the first version with:
+
+Menu system
+
+Add contact
+
+List contacts
+
+Once you’ve got that, I’ll review it and we can add search, delete, update, and even tag-based filtering in v2.
